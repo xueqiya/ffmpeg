@@ -1,0 +1,14 @@
+prefix=/Users/mac/Projects/my/ffmpeg/FFmpeg-n4.3.3/darwin
+exec_prefix=${prefix}
+libdir=/Users/mac/Projects/my/ffmpeg/FFmpeg-n4.3.3/darwin/lib
+includedir=/Users/mac/Projects/my/ffmpeg/FFmpeg-n4.3.3/darwin/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 56.51.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -pthread -lm -framework VideoToolbox -framework CoreFoundation -framework CoreMedia -framework CoreVideo -framework CoreServices
+Cflags: -I${includedir}

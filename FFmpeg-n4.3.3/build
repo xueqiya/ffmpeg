@@ -1,0 +1,12 @@
+./configure
+# 不编译静态库
+--disable-static
+# 编译动态库
+--enable-shared
+# 编译后产生文件的目标目录，不能用相对路径，否则使用库的时候，会找不到：
+# 比如--prefix=./darwin，项目会去./darwin/[CMake指定的路径]/下查找
+--prefix=$(pwd)/darwin
+# 不加会提示需要加入此参数
+--disable-x86asm
+# 目标系统，必加，darwin指的MAC系统，同理还支持android、sunos、cygwin等
+--target-os=darwin
